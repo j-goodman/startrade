@@ -7,7 +7,7 @@
 <body>
   <container>
     <screens>
-      <viewscreen id='status-panel' class='active'>
+      <viewscreen id='status-panel'>
         <component id='info-box'>
           <text id='name'>Chancartier</text>
           <text id='description'>A mining outpost left over from the days of the ore races.<br><br>The civilians of Chancartier are notoriously mistrustful of outsiders, but recent food shortages have forced them to open their skies to traders. Though the planets mines have long since run empty of ore, they still produce some silver.</text>
@@ -15,15 +15,20 @@
         <component id='planet-image'></component>
       </viewscreen>
       <viewscreen id='controls-panel'></viewscreen>
-      <viewscreen id='cargo-panel'></viewscreen>
+      <viewscreen id='cargo-panel' class='active'>
+        <component id='cargo-main'>
+          <text id='cargo-label'>CARGO HOLD</text>
+          <component id='cargo-hold'></component>
+        </component>
+      </viewscreen>
       <viewscreen id='action-panel'></viewscreen>
       <viewscreen id='map-panel'></viewscreen>
     </screens>
     <menu>
-      <text id='menu-selector'>menu</text>
+      <text id='menu-selector'></text>
       <item id='status'>☉</item>
-      <item id='controls'>🜛</item>
-      <item id='cargo'>❖</item>
+      <item id='controls'>🜉</item>
+      <item id='cargo'>⧮</item>
       <item id='action'>⤱</item>
       <item id='map'>✶</item>
     </menu>
