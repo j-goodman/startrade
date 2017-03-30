@@ -1,30 +1,31 @@
 <head>
   <meta charset=UTF-8>
-  <script src='startrade.js'></script>
+  <script src='lib/setup.js'></script>
+  <script src='lib/startrade.js'></script>
   <link rel='stylesheet' href='style.css'>
 </head>
 <body>
   <container>
     <screens>
-      <viewscreen id='location-reader'>
+      <viewscreen id='status-panel' class='active'>
         <component id='info-box'>
           <text id='name'>Chancartier</text>
           <text id='description'>A mining outpost left over from the days of the ore races.</text>
         </component>
         <component id='planet-image'></component>
       </viewscreen>
-      <!--<viewscreen id='ship-controls'></viewscreen>
-      <viewscreen id='cargo-reader'></viewscreen>
-      <viewscreen id='action-reader'></viewscreen>
-      <viewscreen id='map-reader'></viewscreen>-->
+      <viewscreen id='controls-panel'></viewscreen>
+      <viewscreen id='cargo-panel'></viewscreen>
+      <viewscreen id='action-panel'></viewscreen>
+      <viewscreen id='map-panel'></viewscreen>
     </screens>
     <menu>
       <text id='menu-selector'>menu</text>
-      <item>☉</item>
-      <item>🜛</item>
-      <item>❖</item>
-      <item>⤱</item>
-      <item>✶</item>
+      <item id='status'>☉</item>
+      <item id='controls'>🜛</item>
+      <item id='cargo'>❖</item>
+      <item id='action'>⤱</item>
+      <item id='map'>✶</item>
     </menu>
   </container>
 </body>
