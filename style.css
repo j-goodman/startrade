@@ -18,11 +18,18 @@ container {
 viewscreen {
   align-items: center;
   border: 1px solid #0ac;
-  display: flex;
+  display: none;
   height: 600px;
   justify-content: center;
-  transform: rotateY(16deg);
+  transform: rotateY(16deg) rotateX(0deg);
+  transition: transform .6s, opacity .1s;
   width: 972px;
+}
+
+.active {
+  display: flex;
+  transition: transform .6s, opacity .1s;
+  opacity: 1;
 }
 
 component {
@@ -35,7 +42,7 @@ text {
   font-family: monospace;
 }
 
-#location-reader > #info-box {
+#status-panel > #info-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,18 +51,18 @@ text {
   width: 300px;
 }
 
-#location-reader > #info-box > #name {
+#status-panel > #info-box > #name {
   margin-bottom: 16px;
   margin-top: 16px;
   text-align: center;
   width: 100%;
 }
 
-#location-reader > #info-box > #description {
+#status-panel > #info-box > #description {
   width: 90%;
 }
 
-#location-reader > #planet-image {
+#status-panel > #planet-image {
   background-image: url('./assets/images/chancartier.jpg');
   background-size: cover;
   background-position: center;
@@ -69,7 +76,7 @@ menu {
   flex-direction: column;
   height: 600px;
   justify-content: center;
-  transform: rotateY(-30deg);
+  transform: rotateY(-30deg) translateX(-40px) translateZ(-70px);
   width: 120px;
 }
 

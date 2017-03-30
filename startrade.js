@@ -28,7 +28,15 @@ var menuSetup = function () {
   var cargo = document.getElementById('cargo');
   var action = document.getElementById('action');
   var map = document.getElementById('map');
+
   var menu = [status, controls, cargo, action, map];
+  var slides = {
+    status: document.getElementById('status-panel'),
+    controls: document.getElementById('controls-panel'),
+    cargo: document.getElementById('cargo-panel'),
+    action: document.getElementById('action-panel'),
+    map: document.getElementById('map-panel'),
+  };
 
   menu.forEach(function (item) {
     item.onmouseover = function () {
@@ -37,7 +45,19 @@ var menuSetup = function () {
     }
     item.onmouseleave = function () {
       selector.innerText = '';
-      document.flash(selector);
+    }
+    item.onclick = function () {
+      var i;
+      for (i=0 ; i<5 ; i++) {
+        slides[Object.keys(slides)[i]].className = '';
+      }
+      slides[this.id].className = 'active';
+      slides[this.id].style.transform = 'rotateY(16deg) rotateX(' + -180 + 'deg)';
+      slides[this.id].style.opacity = 0;
+      setTimeout(function () {
+        slides[this.id].style.transform = 'rotateY(16deg) rotateX(' + 0 + 'deg)';
+        slides[this.id].style.opacity = 1;
+      }.bind(this), 100)
     }
   });
 };
