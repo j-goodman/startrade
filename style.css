@@ -42,6 +42,7 @@ text {
   font-family: monospace;
 }
 
+/* STATUS PANEL */
 #status-panel > #info-box {
   display: flex;
   flex-direction: column;
@@ -70,6 +71,8 @@ text {
   width: 640px;
 }
 
+
+/* CARGO PANEL */
 #cargo-main {
   border: none;
   display: flex;
@@ -105,6 +108,18 @@ text {
   width: 50px;
 }
 
+/* MAP PANEL */
+#map-panel {
+  perspective: 600px;
+}
+
+#map-panel > #map-base {
+  border: 1px solid #0ac;
+  transform: rotateX(90deg) rotateZ(0deg) translateZ(-146px);
+  height: 500px;
+  width: 500px;
+}
+
 menu {
   border: 1px solid #0ac;
   display: flex;
@@ -132,7 +147,7 @@ menu > item {
 
 menu > item:hover {
   cursor: pointer;
-  transform: translateX(-6px) translateY(-4px);
+  transform: translateX(-3px) translateY(-4px);
 }
 
 menu > #menu-selector {
